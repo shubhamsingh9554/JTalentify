@@ -1,0 +1,132 @@
+/* EmployeeProfile.css */
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #f0f0f0; /* Light background */
+}
+
+.profile-container {
+ /* max-width: 800px; */
+  margin: 0px auto;
+  padding: 20px;
+  background-color: white; /* Main content background */
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.profile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #3411A3; /* Header background */
+  color: white; /* Header text color */
+  padding: 15px;
+  border-radius: 10px 10px 0 0; /* Rounded top corners */
+}
+
+.logout-button {
+  background-color: #FF6196; /* Logout button color */
+  color: white; /* Button text color */
+  border: none;
+  border-radius: 5px;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.logout-button:hover {
+  background-color: #71EAE1; /* Button hover color */
+}
+
+.error-message {
+  color: #FF6196; /* Error message color */
+}
+
+h2, h3, h4 {
+  color: #d83a9c; /* Heading colors */
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  background-color: #9fc7c9; /* Background for list items */
+  padding: 10px;
+  border-radius: 5px;
+  margin-bottom: 10px;
+}
+
+input[type="number"], select {
+  border: 1px solid #3411A3; /* Input border color */
+  border-radius: 5px;
+  padding: 8px;
+  margin-right: 10px;
+}
+
+button {
+  background-color: #71EAE1; /* General button color */
+  color: #3411A3; /* Button text color */
+  border: none;
+  border-radius: 5px;
+  padding: 8px 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+button:hover {
+  background-color: #FF6196; /* Button hover color */
+}
+
+
+.employee-profile-container {
+  display: flex; /* Enable flexbox for layout */
+  height: 100vh; /* Full height of the viewport */
+}
+
+.sidebar {
+  width: 250px; /* Fixed width for the sidebar */
+  background-color: #3411A3; /* Sidebar background color */
+  color: white; /* Text color in sidebar */
+  padding: 20px; /* Padding for sidebar content */
+}
+
+.sidebar h2 {
+  margin-top: 0; /* Remove top margin from sidebar header */
+}
+
+.sidebar ul {
+  list-style: none; /* Remove default list styling */
+  padding: 0; /* Remove default padding */
+}
+
+.sidebar li {
+  margin-bottom: 15px; /* Space between sidebar items */
+}
+
+.sidebar a {
+  color: white; /* Link color in sidebar */
+  text-decoration: none; /* Remove underline from links */
+}
+
+.sidebar a:hover {
+  text-decoration: underline; /* Underline on hover */
+}
+
+.content {
+  flex-grow: 1; /* Allow content to grow and fill available space */
+  padding: 20px; /* Padding for content area */
+  overflow-y: auto; /* Enable scrolling if content overflows */
+}
+
+.profile-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.error-message {
+  color: red; /* Red color for error messages */
+}

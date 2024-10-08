@@ -1,0 +1,64 @@
+
+.register-container {
+    max-width: 500px;
+    margin: 140px auto;
+    padding: 20px;
+    background-color: #3411A3;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+  }
+  .register-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    color:  #FF6196;
+  }
+  
+  .register-input, .register-select {
+    width: 90%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #000; /* Black */
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  
+  .register-input:focus, .register-select:focus {
+    outline: none;
+    border-color: #71EAE1; /* Aqua */
+  }
+  
+  /* Button styling */
+  .register-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #FF6196; /* Pink */
+    border: none;
+    border-radius: 5px;
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-top: 15px;
+  }
+  
+  .register-button:hover {
+    background-color: #3411A3; /* Purple */
+  }
+  
+  .login-prompt {
+    margin-top: 15px;
+    font-size: 1rem;
+    color: #fff; /* Black */
+  }
+  
+  .login-link {
+    color: #FF6196; /* Pink */
+    font-weight: bold;
+    text-decoration: none;
+  }
+  
+  .login-link:hover {
+    color: #71EAE1; /* Aqua */
+    text-decoration: underline;
+  }
+  

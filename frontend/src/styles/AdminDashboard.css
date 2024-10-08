@@ -1,0 +1,305 @@
+.admin-dashboard {
+  display: flex;
+  min-height: 100vh;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #3411A3; /* Default sidebar color */
+  padding: 20px;
+  color: white;
+  transition: background-color 0.3s;
+}
+
+.sidebar h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.sidebar ul {
+  list-style: none;
+  padding: 0;
+}
+
+.sidebar ul li {
+  margin: 15px 0;
+}
+
+.sidebar ul li a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+}
+
+.sidebar ul li a:hover {
+  text-decoration: underline;
+}
+
+.logout-btn {
+
+  padding: 10px;
+  background-color: #FF6196; /* Logout button color */
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.logout-btn:hover {
+  background-color: #e03e60;
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+  background-color: #f8f9fa; /* Light background for light mode */
+  transition: background-color 0.3s, color 0.3s;
+}
+
+/* Dark Mode Styles */
+.admin-dashboard.dark-mode {
+  background-color: #121212; /* Dark background for dark mode */
+  color: #ffffff; /* Text color for dark mode */
+}
+
+.sidebar.dark-mode {
+  background-color: #1e1e1e; /* Sidebar background for dark mode */
+}
+
+.content.dark-mode {
+  background-color: #121212; /* Dark background for content area in dark mode */
+  color: #ffffff; /* Text color for content area in dark mode */
+}
+
+h3 {
+  color: #3411A3; /* Heading color */
+  margin-top: 20px;
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+.admin-input {
+  margin-right: 10px;
+  padding: 8px;
+  border: 1px solid #000; /* Default input border color */
+}
+
+.admin-button {
+  padding: 8px 12px;
+  background-color: #71EAE1; /* Default button color */
+  color: black; /* Default button text color */
+  border: none;
+  cursor: pointer;
+}
+
+.admin-button:hover {
+  background-color: #5ad5d0;
+}
+
+/* Dark Mode Input and Button Styles */
+.admin-input.dark-mode {
+  border: 1px solid #fff; /* Input border color for dark mode */
+  background-color: #1e1e1e; /* Input background for dark mode */
+  color: #ffffff; /* Input text color for dark mode */
+}
+
+.admin-button.dark-mode {
+  background-color: #bb86fc; /* Button background for dark mode */
+  color: black; /* Button text color for dark mode */
+}
+
+.admin-list {
+  list-style: none;
+  padding: 0;
+}
+
+.admin-list-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.admin-delete-button {
+  background-color: #dc3545; /* Delete button background */
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  cursor: pointer;
+}
+
+.admin-delete-button:hover {
+  background-color: #c82333;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.admin-table th,
+.admin-table td {
+  border: 1px solid #ddd;
+  padding: 8px;
+  text-align: left;
+}
+
+.admin-table th {
+  background-color: #3411A3; /* Table header background */
+  color: white; /* Table header text color */
+}
+
+.admin-table tr:nth-child(even) {
+  background-color: #f2f2f2; /* Alternate row color */
+}
+
+.admin-table tr:hover {
+  background-color: #ddd; /* Hover effect for table rows */
+}
+
+/* Dark Mode Table Styles */
+.admin-table.dark-mode th {
+  background-color: #3700b3; /* Table header background for dark mode */
+  color: #ffffff; /* Table header text color for dark mode */
+}
+
+.admin-table.dark-mode tr:nth-child(even) {
+  background-color: #1e1e1e; /* Table row background for dark mode */
+}
+
+.admin-table.dark-mode tr:hover {
+  background-color: #333333; /* Hover effect for table rows in dark mode */
+}
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.7);
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 5px;
+  width: 300px;
+  position: relative;
+}
+
+.close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  cursor: pointer;
+  font-size: 20px;
+}
+.cards-section {
+  display: flex;
+  justify-content: space-around;
+  margin: 20px 0;
+}
+
+.card {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  width: 200px;
+  text-align: center;
+}
+
+.card h4 {
+  color: #3411A3; /* Customize the color */
+  margin-bottom: 10px;
+}
+
+.card p {
+  font-size: 24px;
+  font-weight: bold;
+  color: #FF6196; /* Customize the color */
+}
+
+
+
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000; /* Ensures the popup is above other content */
+}
+
+.popup-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.charts {
+  display: flex;
+  justify-content: space-between; /* Space between the two charts */
+  flex-wrap: wrap; /* Allow wrapping if there's not enough space */
+  margin-top: 20px; /* Space above the charts */
+}
+
+.chart-container {
+  flex: 1; /* Allow each chart to grow equally */
+  min-width: 300px; /* Set a minimum width for each chart */
+  margin: 10px; /* Space between the charts */
+  max-width: 50vw; /* Optional: Limit the max width of the chart containers */
+}
+
+.pie-chart-container {
+  width: 300px; /* Adjust width as needed */
+  height: 300px; /* Adjust height as needed */
+  margin: 20px auto; /* Center the chart */
+}
+
+/* Notification */
+.notification {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  background-color: #aa0a17;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  font-weight: bold;
+  z-index: 1000;
+  animation: fadeInOut 3s ease-in-out;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  10% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  90% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  100% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+}
