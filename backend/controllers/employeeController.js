@@ -18,7 +18,6 @@ exports.getEmployeeProfile = async (req, res) => {
     const skillsWithNames = await Promise.all(
       employee.skills.map(async (empSkill) => {
         const skill = await Skill.findById(empSkill.skillId);
-        console.log("Skill found:", skill); // Log skill details
         return {
           _id: empSkill._id,
           skillName: skill.skillName,
@@ -32,7 +31,6 @@ exports.getEmployeeProfile = async (req, res) => {
     const certsWithNames = await Promise.all(
       employee.certifications.map(async (empCert) => {
         const cert = await Certification.findById(empCert.certificationId);
-        console.log("Certification found:", cert); // Log cert details
         return {
           _id: empCert._id,
           certificationName: cert.certificationName,

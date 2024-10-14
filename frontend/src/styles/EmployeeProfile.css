@@ -15,6 +15,22 @@ body {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+
+.profile-image-container {
+  display: flex;
+  justify-content: left;
+  margin: 10px 0;
+}
+
+.profile-image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%; 
+  object-fit: cover; 
+  border: 3px solid #3411A3; 
+}
+
+
 .profile-header {
   display: flex;
   justify-content: space-between;

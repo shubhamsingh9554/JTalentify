@@ -30,7 +30,9 @@ const Login = () => {
   return (
     <div className="login-container">
       <form onSubmit={handleSubmit} className="login-form">
-      <h3 className="login-title">Login</h3>
+      <h2 className="login-title">JTalentify</h2>
+      <h4 className="login-projectname">Login to Employee Skill and Competency Tracking System</h4>
+      
         <input 
           type="email" 
           placeholder="Email" 
@@ -47,7 +49,7 @@ const Login = () => {
         />
         <button type="submit" className="login-button">Login</button>
         <p className="signup-prompt">
-        New here? <Link to="/register" className="signup-link">Register</Link>
+        Don't have account? Let's <Link to="/register" className="signup-link">Register</Link>
       </p>
       </form>
     </div>

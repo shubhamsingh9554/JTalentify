@@ -21,6 +21,17 @@
     margin-left: 20px;
   }
   
+ .contact-btn {
+  background-color: #FF6196;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  margin-left: 600px;
+}
+ .contact-btn:hover {
+  background-color: #71EAE1;
+}
   .navbar-menu a {
     color: white;
     text-decoration: none;
@@ -36,14 +47,14 @@
   }
   
   .logout-btn {
-    padding: 10px;
-    background-color: #FF6196; /* Logout button color */
+    
+    background-color: #FF6196; 
     color: white;
     border: none;
     cursor: pointer;
     font-size: 16px;
     margin-right: 10px;
-    margin-top: 10px;
+   
   }
   
   .logout-btn:hover {

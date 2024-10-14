@@ -355,8 +355,9 @@ const AdminDashboard = () => {
           <div className="popup">
             <div className="popup-content">
               <h4>{selectedEmployee.name}'s Details</h4>
-              <p>Email: {selectedEmployee.email}</p>
-
+              <h5>Email: {selectedEmployee.email}</h5>
+              <h5>Department: Engineering</h5>
+              <h5>Designation: Software Engineer</h5>
               <h5>Skills</h5>
               <ul>
                 {selectedEmployee.skills.map((skill, index) => (

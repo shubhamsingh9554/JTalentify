@@ -1,0 +1,34 @@
+.contact-page {
+  background-color: #71EAE1; /* Light teal for the page background */
+  color: #3411A3; /* Dark purple for text */
+  padding: 40px;
+  border-radius: 10px;
+  max-width: 800px;
+  margin: 20px auto;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.contact-page h1 {
+  color: #FF6196; /* Pink color for the heading */
+  font-size: 36px;
+}
+
+.contact-page p {
+  font-size: 18px;
+  margin: 20px 0;
+}
+
+.contact-info {
+  margin-top: 30px;
+}
+
+.contact-info p {
+  font-size: 20px;
+  color: #3411A3; /* Dark purple for contact info */
+}
+
+.contact-info span {
+  color: #FF6196; /* Pink for highlighted contact details */
+  font-weight: bold;
+}

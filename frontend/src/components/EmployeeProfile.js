@@ -3,6 +3,10 @@ import axios from 'axios';
 import '../styles/EmployeeProfile.css';
 import Navbar from './Navbar';
 import '../styles/Navbar.css';
+import profileImage from '../styles/profile.jfif';
+import { ToastContainer, toast } from 'react-toastify'; // Import ToastContainer and toast
+import 'react-toastify/dist/ReactToastify.css'; // Import react-toastify CSS
+
 const EmployeeProfile = () => {
   const [profile, setProfile] = useState(null);
   const [skills, setSkills] = useState([]);
@@ -41,10 +45,11 @@ const EmployeeProfile = () => {
         { skillId, progress: updatedProgress },
         { headers: { Authorization: `Bearer ${token}` } }
       );
-      alert('Progress updated successfully');
+      toast.success('Progress updated successfully'); // Show success toast
       fetchProfile();
     } catch (error) {
       console.error('Error updating progress:', error);
+      toast.error('Error updating progress. Please try again.'); // Show error toast
       setErrorMessage('Error updating progress. Please try again.');
     }
   };
@@ -82,8 +87,10 @@ const EmployeeProfile = () => {
       setSelectedSkill('');
       setCompetencyLevel('');
       fetchProfile();
+      toast.success('Skill added successfully'); // Show success toast
     } catch (err) {
       console.error('Error adding skill:', err);
+      toast.error('Error adding skill. Please try again.'); // Show error toast
       setErrorMessage('Error adding skill. Please try again.');
     }
   };
@@ -97,15 +104,12 @@ const EmployeeProfile = () => {
       });
       setSelectedCertification('');
       fetchProfile();
+      toast.success('Certification added successfully'); // Show success toast
     } catch (err) {
       console.error('Error adding certification:', err);
+      toast.error('Error adding certification. Please try again.'); // Show error toast
       setErrorMessage('Error adding certification. Please try again.');
     }
-  };
-
-  const handleLogout = () => {
-    localStorage.removeItem('token');
-    window.location.href = '/login';
   };
 
   const toggleDarkMode = () => {
@@ -119,6 +123,7 @@ const EmployeeProfile = () => {
   return (
     <div>
       <Navbar />
+      <ToastContainer /> {/* Add the ToastContainer for displaying notifications */}
       <div className={`employee-profile-container ${isDarkMode ? 'dark-mode' : ''}`}>
         <div className="sidebar">
           <h2>Employee Dashboard</h2>
@@ -135,7 +140,12 @@ const EmployeeProfile = () => {
         <div className="content">
           {activeSection === 'profile' && profile && (
             <>
-              <h3>{profile.name}</h3>
+              <div className="profile-image-container">
+                <img src={profileImage} alt="Profile" className="profile-image" />
+              </div>
+              <h3>Employee's Name : {profile.name}</h3>
+              <h3>Department: Engineering</h3>
+              <p>Designation: Software Enginer</p>
               <p>Email: {profile.email}</p>
             </>
           )}
@@ -222,12 +232,15 @@ const EmployeeProfile = () => {
               <h4>Certifications:</h4>
               {profile && profile.certifications.length > 0 ? (
                 <ul>
-                  {profile.certifications.map((cert, index) => (
-                    <li key={cert._id}>{index + 1}. {cert.certificationName}</li>
+                  {profile.certifications.map((certification, index) => (
+                    <li key={certification._id}>
+                      <p><strong>{index + 1})</strong></p>
+                      <p><strong>Certification:</strong> {certification.certificationName}</p>
+                    </li>
                   ))}
                 </ul>
               ) : (
-                <p>No certifications added yet.</p>
+                <p>No certifications found.</p>
               )}
             </>
           )}
