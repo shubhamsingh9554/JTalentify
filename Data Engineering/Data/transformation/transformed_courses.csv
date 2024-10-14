@@ -1,0 +1,13 @@
+course_id,department,role,course_name
+1,Engineering,Developer,Advanced Python Programming
+2,Engineering,Developer,Reactjs Mastery
+3,Engineering,Developer,Cloud Computing Essentials
+4,Engineering,Manager,Agile Project Management
+5,Engineering,Manager,Leadership In Tech
+6,Engineering,Manager,Cloud Strategy For Managers
+7,Engineering,Analyst,Data Science Fundamentals
+8,Engineering,Analyst,Sql For Data Analysis
+9,Engineering,Analyst,Python For Data Analysis
+10,Engineering,Designer,Ui/Ux Design Principles
+11,Engineering,Designer,Advanced Ui/Ux Techniques
+12,Engineering,Designer,Adobe Xd Mastery
