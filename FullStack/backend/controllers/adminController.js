@@ -64,7 +64,6 @@ exports.fetchSkills = async (req, res) => {
   }
 };
 
-// New function to fetch all certifications
 exports.fetchCertifications = async (req, res) => {
   try {
     const certifications = await Certification.find();
@@ -89,7 +88,6 @@ exports.deleteSkill = async (req, res) => {
   }
 };
 
-// New function to delete a certification
 exports.deleteCertification = async (req, res) => {
   try {
     const certification = await Certification.findOneAndDelete(req.params.certificationId);

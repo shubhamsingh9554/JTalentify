@@ -2,14 +2,14 @@ const mongoose = require('mongoose');
 
 const employeeSkillSchema = new mongoose.Schema({
   employeeId: { type: mongoose.Schema.Types.ObjectId, ref: 'Employee', required: true },
-  skillId: { type: mongoose.Schema.Types.ObjectId, ref: 'Skill', required: true }, // Referencing Skill table
+  skillId: { type: mongoose.Schema.Types.ObjectId, ref: 'Skill', required: true }, 
   competencyLevel: {
     type: String,
     enum: ['Beginner', 'Intermediate', 'Advanced'],
     required: true
   },
   progress: {
-    type: Number,  // To represent the progress as a percentage
+    type: Number, 
     default: 0
   },
   approvalStatus: {

@@ -1,3 +1,4 @@
+
 import React, { useState } from 'react';
 import axios from 'axios';
 import { useNavigate, Link } from 'react-router-dom'; 
@@ -8,6 +9,7 @@ const Register = () => {
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
   const [role, setRole] = useState('employee');
+  const [adminCode, setAdminCode] = useState(''); 
   const navigate = useNavigate();
 
   const handleSubmit = async (e) => {
@@ -15,8 +17,14 @@ const Register = () => {
     const payload = {
       name, email, password, department: '', role,
     };
+
     try {
       if (role === 'admin') {
+        // Check if the admin code is correct
+        if (adminCode !== '5066') {
+          alert('Invalid admin code.');
+          return;
+        }
         await axios.post('http://localhost:5000/api/auth/admin/register', payload);
       } else {
         await axios.post('http://localhost:5000/api/auth/employee/register', payload);
@@ -29,6 +37,7 @@ const Register = () => {
 
   return (
     <div className="register-container">
+      <h2 className='login-title'>JTalentify</h2>
       <h2 className="register-title">Register</h2>
       <form onSubmit={handleSubmit} className="register-form">
         <input
@@ -54,12 +63,24 @@ const Register = () => {
         />
         <select
           value={role}
-          onChange={(e) => setRole(e.target.value)}
+          onChange={(e) => {
+            setRole(e.target.value);
+            if (e.target.value !== 'admin') setAdminCode(''); // Reset admin code if not admin
+          }}
           className="register-select"
         >
           <option value="employee">Employee</option>
           <option value="admin">Admin</option>
         </select>
+        {role === 'admin' && (
+          <input
+            type="text"
+            placeholder="Admin Code"
+            value={adminCode}
+            onChange={(e) => setAdminCode(e.target.value)}
+            className="register-input"
+          />
+        )}
         <button type="submit" className="register-button">Register</button>
       </form>
       <p className="login-prompt">

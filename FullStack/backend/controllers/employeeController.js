@@ -26,8 +26,6 @@ exports.getEmployeeProfile = async (req, res) => {
         };
       })
     );
-
-    // Map the certifications to include the certification names
     const certsWithNames = await Promise.all(
       employee.certifications.map(async (empCert) => {
         const cert = await Certification.findById(empCert.certificationId);
@@ -74,7 +72,6 @@ exports.addEmployeeSkill = async (req, res) => {
   }
 };
 
-// Update skill progress
 exports.updateSkillProgress = async (req, res) => {
   const { skillId, progress } = req.body;
 console.log(req.user.userId, progress, skillId);
@@ -89,7 +86,7 @@ const employeeObjectId = new mongoose.Types.ObjectId(req.user.userId);
       return res.status(404).json({ message: 'Skill not found for this employee' });
     }
 
-    skill.progress = progress; // Update the progress field
+    skill.progress = progress; 
     await skill.save();
 
     res.json({ message: 'Skill progress updated successfully', skill });

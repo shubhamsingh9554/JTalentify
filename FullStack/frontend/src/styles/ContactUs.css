@@ -1,16 +1,20 @@
 .contact-page {
-  background-color: #71EAE1; /* Light teal for the page background */
-  color: #3411A3; /* Dark purple for text */
+  background-color: #71EAE1; 
+  color: #3411A3; 
   padding: 40px;
+  position: relative;
   border-radius: 10px;
   max-width: 800px;
-  margin: 20px auto;
+  margin-top: 80px;
+  margin-right: auto;
+  margin-bottom: 20px;
+  margin-left: auto;
   text-align: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
 .contact-page h1 {
-  color: #FF6196; /* Pink color for the heading */
+  color: #FF6196;
   font-size: 36px;
 }
 
@@ -25,10 +29,35 @@
 
 .contact-info p {
   font-size: 20px;
-  color: #3411A3; /* Dark purple for contact info */
+  color: #3411A3; 
 }
 
 .contact-info span {
-  color: #FF6196; /* Pink for highlighted contact details */
+  color: #FF6196;
   font-weight: bold;
+}
+
+.footer {
+  margin-top: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: #777;
+}
+
+.back-button {
+  position: absolute;
+  margin-top: 20px;
+  top: 20px;
+  left: 20px;
+  padding: 10px 15px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.back-button:hover {
+  background-color: #0056b3; 
 }
