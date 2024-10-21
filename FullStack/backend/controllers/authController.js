@@ -52,28 +52,22 @@ exports.login = async (req, res) => {
   const { email, password } = req.body;
 
   try {
-    // Try to find the user either in Admin or Employee collection
     let user = await Admin.findOne({ email });
-    let role = 'admin'; // Default role if the user is found in the Admin collection
-
-    // If user is not an Admin, check if they are an Employee
+    let role = 'admin'; 
     if (!user) {
       user = await Employee.findOne({ email });
-      role = 'employee'; // Update role if the user is found in the Employee collection
+      role = 'employee'; 
     }
 
-    // If no user found
+   
     if (!user) return res.status(400).json({ message: 'Invalid credentials' });
 
-    // Check if the password matches
     const isMatch = await bcrypt.compare(password, user.passwordHash);
     if (!isMatch) return res.status(400).json({ message: 'Invalid credentials' });
 
-    // Create a JWT token with userId and role
     const payload = { userId: user._id, role };
     const token = jwt.sign(payload, process.env.JWT_SECRET, { expiresIn: '1h' });
 
-    // Return the token and role to the frontend
     res.json({ token, role });
   } catch (error) {
     console.error(error.message);

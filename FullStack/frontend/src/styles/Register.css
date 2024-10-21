@@ -1,5 +1,4 @@
-
-.register-container {
+  .register-container {
     max-width: 500px;
     margin: 140px auto;
     padding: 20px;
@@ -7,18 +6,30 @@
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     text-align: center;
+    background-image: url('./2.jpg');
+    background-size: cover;
+    background-position: center;
   }
+
   .register-title {
     font-size: 2rem;
     margin-bottom: 20px;
     color:  #ffffff;
   }
   
-  .register-input, .register-select {
-    width: 90%;
+  .register-input {
+    width: 95%;
     padding: 10px;
     margin: 10px 0;
-    border: 1px solid #000; /* Black */
+    border: 1px solid #000; 
+    border-radius: 5px;
+    font-size: 1rem;
+  }
+  .register-select {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid #000; 
     border-radius: 5px;
     font-size: 1rem;
   }

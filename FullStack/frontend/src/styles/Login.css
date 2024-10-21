@@ -4,15 +4,18 @@
     justify-content: center;
     align-items: center;
     height: 100vh;
+    
   }
-  
   .login-form {
-    background-color: #3411A3;
     padding: 40px;
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
     width: 100%;
     max-width: 500px;
+    background-color: rgba(52, 17, 163, 0.7); 
+    background-image: url('./2.jpg'); 
+    background-size: cover; 
+    background-position: center;
   }
   
   .login-title {
